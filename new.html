@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searchable Listing Dashboard</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>Job & Project Listings</h1>
+            <p>Explore opportunities filtered in real-time</p>
+        </header>
+
+        <!-- Controls (Search, Filters, Sorting) -->
+        <div class="controls-card">
+            <!-- Real-time Search Input -->
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search by title, skills, or keywords...">
+            </div>
+
+            <div class="filters-group">
+                <!-- Domain Filter -->
+                <select id="domain-filter">
+                    <option value="all">All Domains</option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="Backend">Backend</option>
+                    <option value="Fullstack">Fullstack</option>
+                    <option value="Design">Design</option>
+                </select>
+
+                <!-- Experience Level Filter -->
+                <select id="experience-filter">
+                    <option value="all">All Experience Levels</option>
+                    <option value="Entry">Entry Level</option>
+                    <option value="Mid">Mid Level</option>
+                    <option value="Senior">Senior Level</option>
+                </select>
+
+                <!-- Remote Status Filter -->
+                <select id="remote-filter">
+                    <option value="all">All Locations</option>
+                    <option value="Remote">Remote</option>
+                    <option value="On-site">On-site</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+
+                <!-- Sorting Dropdown -->
+                <select id="sort-select">
+                    <option value="newest">Sort by: Newest</option>
+                    <option value="alphabetical">Sort by: Title (A-Z)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Listings Results Container -->
+        <div id="listings-grid" class="listings-grid">
+            <!-- Dynamic cards rendered via JS -->
+        </div>
+
+        <!-- Empty State View -->
+        <div id="empty-state" class="empty-state hidden">
+            <div class="empty-icon">🔍</div>
+            <h2>No listings found</h2>
+            <p>Try adjusting your search terms or clearing filters to see more results.</p>
+            <button id="clear-filters-btn" class="btn-clear">Clear All Filters</button>
+        </div>
+    </div>
+
+    <script src="new.js"></script>
+</body>
+</html>
